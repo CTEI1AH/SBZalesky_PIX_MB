@@ -29,6 +29,11 @@
                 <d7p1:Expression>io_MailSender</d7p1:Expression>
                 <d7p1:Type>System.String</d7p1:Type>
               </d7p1:ArgumentItem>
+              <d7p1:ArgumentItem z:Id="i7">
+                <d7p1:ArgumentName>out_FindMail</d7p1:ArgumentName>
+                <d7p1:Expression>in_FindMail</d7p1:Expression>
+                <d7p1:Type>System.Boolean</d7p1:Type>
+              </d7p1:ArgumentItem>
             </_value>
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
@@ -41,12 +46,129 @@
         <Text>Получить конфиг с Mail</Text>
         <_activityFullName>BR.Core.Base.ExecuteScript</_activityFullName>
       </AbstractStep>
-      <AbstractStep z:Id="i7" i:type="ExecutedStep">
+      <AbstractStep z:Id="i8" i:type="ExecutedStep">
+        <Childs>
+          <AbstractStep z:Id="i9" i:type="ExecutedStep">
+            <Childs>
+              <AbstractStep z:Id="i10" i:type="ExecutedStep">
+                <Childs />
+                <Id>e9c48829-22aa-453e-835b-a4c1f65dbf51</Id>
+                <Parent z:Ref="i9" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i11">
+                    <PropertyName>Text</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>"Создание ДТ..."</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
+              </AbstractStep>
+            </Childs>
+            <Id>57c503e4-3330-4f7c-96a9-52d3494fd889</Id>
+            <Parent z:Ref="i8" />
+            <PropertyValues />
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>BR.Core.Base.IfTrue</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i12" i:type="ExecutedStep">
+            <Childs>
+              <AbstractStep z:Id="i13" i:type="ExecutedStep">
+                <Childs />
+                <Id>d87217d5-c1c1-4ec4-bc0a-d4d635d0b32b</Id>
+                <Parent z:Ref="i12" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i14">
+                    <PropertyName>Text</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>"Писем не обнаружено, завершение работы..."</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i15" i:type="ExecutedStep">
+                <Childs />
+                <Id>d1138e0e-10b4-4d23-951b-15d0c78b769e</Id>
+                <Parent z:Ref="i12" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i16">
+                    <PropertyName>Text</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>"Лох"</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId>0</SelectedOptionId>
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.ThrowException</_activityFullName>
+              </AbstractStep>
+            </Childs>
+            <Id>8767597e-066a-4605-b187-e51eda18eb66</Id>
+            <Parent z:Ref="i8" />
+            <PropertyValues />
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>BR.Core.Base.IfFalse</_activityFullName>
+          </AbstractStep>
+        </Childs>
+        <Id>e869238c-1c2e-47ee-9043-c3f476ea370a</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i17">
+            <PropertyName>Condition</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>in_FindMail</_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <AutoCloseMode>None</AutoCloseMode>
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text></Text>
+        <_activityFullName>BR.Core.Base.If</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i18" i:type="ExecutedStep">
         <Childs />
         <Id>9b18f43e-034c-4706-9f6b-81deee134795</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
-          <PropertyValue z:Id="i8">
+          <PropertyValue z:Id="i19">
             <PropertyName>FilePath</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>@"generate_dt_Merge.pix"</_expression>
@@ -54,28 +176,28 @@
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i9">
+          <PropertyValue z:Id="i20">
             <PropertyName>Parameters</PropertyName>
             <_dataType>Value</_dataType>
             <_expression i:nil="true" />
             <_screenShotBase64 i:nil="true" />
             <_value xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.Core" i:type="d7p1:ArrayOfArgumentItem">
-              <d7p1:ArgumentItem z:Id="i10">
+              <d7p1:ArgumentItem z:Id="i21">
                 <d7p1:ArgumentName>out_dt_Merge</d7p1:ArgumentName>
                 <d7p1:Expression>io_dt_Merge</d7p1:Expression>
                 <d7p1:Type>System.Data.DataTable</d7p1:Type>
               </d7p1:ArgumentItem>
-              <d7p1:ArgumentItem z:Id="i11">
+              <d7p1:ArgumentItem z:Id="i22">
                 <d7p1:ArgumentName>io_DateStart</d7p1:ArgumentName>
                 <d7p1:Expression>io_DateStart</d7p1:Expression>
                 <d7p1:Type>System.String</d7p1:Type>
               </d7p1:ArgumentItem>
-              <d7p1:ArgumentItem z:Id="i12">
+              <d7p1:ArgumentItem z:Id="i23">
                 <d7p1:ArgumentName>io_DateEnd</d7p1:ArgumentName>
                 <d7p1:Expression>io_DateEnd</d7p1:Expression>
                 <d7p1:Type>System.String</d7p1:Type>
               </d7p1:ArgumentItem>
-              <d7p1:ArgumentItem z:Id="i13">
+              <d7p1:ArgumentItem z:Id="i24">
                 <d7p1:ArgumentName>global_ReportName</d7p1:ArgumentName>
                 <d7p1:Expression>global_ReportName</d7p1:Expression>
                 <d7p1:Type>System.String</d7p1:Type>
@@ -92,12 +214,12 @@
         <Text>Создать полную ДТ</Text>
         <_activityFullName>BR.Core.Base.ExecuteScript</_activityFullName>
       </AbstractStep>
-      <AbstractStep z:Id="i14" i:type="ExecutedStep">
+      <AbstractStep z:Id="i25" i:type="ExecutedStep">
         <Childs />
         <Id>a7ee2ad9-e487-4b5b-8f6d-ac8fbc0817ad</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
-          <PropertyValue z:Id="i15">
+          <PropertyValue z:Id="i26">
             <PropertyName>FilePath</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>@"generate_report.pix"</_expression>
@@ -105,28 +227,28 @@
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i16">
+          <PropertyValue z:Id="i27">
             <PropertyName>Parameters</PropertyName>
             <_dataType>Value</_dataType>
             <_expression i:nil="true" />
             <_screenShotBase64 i:nil="true" />
             <_value xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.Core" i:type="d7p1:ArrayOfArgumentItem">
-              <d7p1:ArgumentItem z:Id="i17">
+              <d7p1:ArgumentItem z:Id="i28">
                 <d7p1:ArgumentName>io_DateStart</d7p1:ArgumentName>
                 <d7p1:Expression>io_DateStart</d7p1:Expression>
                 <d7p1:Type>System.String</d7p1:Type>
               </d7p1:ArgumentItem>
-              <d7p1:ArgumentItem z:Id="i18">
+              <d7p1:ArgumentItem z:Id="i29">
                 <d7p1:ArgumentName>io_DateEnd</d7p1:ArgumentName>
                 <d7p1:Expression>io_DateEnd</d7p1:Expression>
                 <d7p1:Type>System.String</d7p1:Type>
               </d7p1:ArgumentItem>
-              <d7p1:ArgumentItem z:Id="i19">
+              <d7p1:ArgumentItem z:Id="i30">
                 <d7p1:ArgumentName>in_dt_Merge</d7p1:ArgumentName>
                 <d7p1:Expression>io_dt_Merge</d7p1:Expression>
                 <d7p1:Type>System.Data.DataTable</d7p1:Type>
               </d7p1:ArgumentItem>
-              <d7p1:ArgumentItem z:Id="i20">
+              <d7p1:ArgumentItem z:Id="i31">
                 <d7p1:ArgumentName>global_ReportName</d7p1:ArgumentName>
                 <d7p1:Expression>global_ReportName</d7p1:Expression>
                 <d7p1:Type>System.String</d7p1:Type>
@@ -143,12 +265,12 @@
         <Text>Создать репорт файл</Text>
         <_activityFullName>BR.Core.Base.ExecuteScript</_activityFullName>
       </AbstractStep>
-      <AbstractStep z:Id="i21" i:type="ExecutedStep">
+      <AbstractStep z:Id="i32" i:type="ExecutedStep">
         <Childs />
         <Id>7c158dbf-5c6a-4339-904a-2e61686aaeec</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
-          <PropertyValue z:Id="i22">
+          <PropertyValue z:Id="i33">
             <PropertyName>Value</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>io_dt_Merge.Rows.Count</_expression>
@@ -156,7 +278,7 @@
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i23">
+          <PropertyValue z:Id="i34">
             <PropertyName>To</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>out_RowCount</_expression>
@@ -173,31 +295,31 @@
         <Text>Кол-во строк</Text>
         <_activityFullName>BR.Core.Base.Assign</_activityFullName>
       </AbstractStep>
-      <AbstractStep z:Id="i24" i:type="ExecutedStep">
+      <AbstractStep z:Id="i35" i:type="ExecutedStep">
         <Childs />
-        <Id>69a185b4-ccb5-4ef7-a554-18aac9ad0f23</Id>
+        <Id>f04f6a8d-6491-4e72-a07d-52f5ee940c5d</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
-          <PropertyValue z:Id="i25">
+          <PropertyValue z:Id="i36">
             <PropertyName>FilePath</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>@"INT_Sklonenie.pix"</_expression>
+            <_expression>@"declension .pix"</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i26">
+          <PropertyValue z:Id="i37">
             <PropertyName>Parameters</PropertyName>
             <_dataType>Value</_dataType>
             <_expression i:nil="true" />
             <_screenShotBase64 i:nil="true" />
             <_value xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.Core" i:type="d7p1:ArrayOfArgumentItem">
-              <d7p1:ArgumentItem z:Id="i27">
+              <d7p1:ArgumentItem z:Id="i38">
                 <d7p1:ArgumentName>in_RowCount</d7p1:ArgumentName>
                 <d7p1:Expression>out_RowCount</d7p1:Expression>
                 <d7p1:Type>System.Int32</d7p1:Type>
               </d7p1:ArgumentItem>
-              <d7p1:ArgumentItem z:Id="i28">
+              <d7p1:ArgumentItem z:Id="i39">
                 <d7p1:ArgumentName>out_string_EndLine</d7p1:ArgumentName>
                 <d7p1:Expression>io_string_EndLine</d7p1:Expression>
                 <d7p1:Type>System.String</d7p1:Type>
@@ -214,12 +336,12 @@
         <Text>Строка/строки/строк</Text>
         <_activityFullName>BR.Core.Base.ExecuteScript</_activityFullName>
       </AbstractStep>
-      <AbstractStep z:Id="i29" i:type="ExecutedStep">
+      <AbstractStep z:Id="i40" i:type="ExecutedStep">
         <Childs />
         <Id>963093ec-d26c-4c85-aba4-392e09d5cc13</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
-          <PropertyValue z:Id="i30">
+          <PropertyValue z:Id="i41">
             <PropertyName>FilePath</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>@"send_mail.pix"</_expression>
@@ -227,23 +349,23 @@
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i31">
+          <PropertyValue z:Id="i42">
             <PropertyName>Parameters</PropertyName>
             <_dataType>Value</_dataType>
             <_expression i:nil="true" />
             <_screenShotBase64 i:nil="true" />
             <_value xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.Core" i:type="d7p1:ArrayOfArgumentItem">
-              <d7p1:ArgumentItem z:Id="i32">
+              <d7p1:ArgumentItem z:Id="i43">
                 <d7p1:ArgumentName>in_MailSender</d7p1:ArgumentName>
                 <d7p1:Expression>io_MailSender</d7p1:Expression>
                 <d7p1:Type>System.String</d7p1:Type>
               </d7p1:ArgumentItem>
-              <d7p1:ArgumentItem z:Id="i33">
+              <d7p1:ArgumentItem z:Id="i44">
                 <d7p1:ArgumentName>in_string_EndLine</d7p1:ArgumentName>
                 <d7p1:Expression>io_string_EndLine</d7p1:Expression>
                 <d7p1:Type>System.String</d7p1:Type>
               </d7p1:ArgumentItem>
-              <d7p1:ArgumentItem z:Id="i34">
+              <d7p1:ArgumentItem z:Id="i45">
                 <d7p1:ArgumentName>in_RowCount</d7p1:ArgumentName>
                 <d7p1:Expression>out_RowCount</d7p1:Expression>
                 <d7p1:Type>System.Int32</d7p1:Type>
@@ -275,54 +397,61 @@
   <Name>main.pix</Name>
   <Namespaces xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <Params>
-    <Parameter z:Id="i35">
+    <Parameter z:Id="i46">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>io_dt_Merge</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.Data.DataTable</TypeString>
     </Parameter>
-    <Parameter z:Id="i36">
+    <Parameter z:Id="i47">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>io_DateStart</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.String</TypeString>
     </Parameter>
-    <Parameter z:Id="i37">
+    <Parameter z:Id="i48">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>io_DateEnd</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.String</TypeString>
     </Parameter>
-    <Parameter z:Id="i38">
+    <Parameter z:Id="i49">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>global_ReportName</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.String</TypeString>
     </Parameter>
-    <Parameter z:Id="i39">
+    <Parameter z:Id="i50">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>io_MailSender</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.String</TypeString>
     </Parameter>
-    <Parameter z:Id="i40">
+    <Parameter z:Id="i51">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>out_RowCount</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.Int32</TypeString>
     </Parameter>
-    <Parameter z:Id="i41">
+    <Parameter z:Id="i52">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>io_string_EndLine</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.String</TypeString>
+    </Parameter>
+    <Parameter z:Id="i53">
+      <DefaultValueExpression></DefaultValueExpression>
+      <Description></Description>
+      <Name>in_FindMail</Name>
+      <RunnerType>None</RunnerType>
+      <TypeString>System.Boolean</TypeString>
     </Parameter>
   </Params>
   <PlatformVersion xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">

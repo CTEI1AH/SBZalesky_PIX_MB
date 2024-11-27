@@ -348,19 +348,6 @@
         <Text></Text>
         <_activityFullName>BR.Core.Base.LoopForEach</_activityFullName>
       </AbstractStep>
-      <AbstractStep z:Id="i36" i:type="ExecutedStep">
-        <Childs />
-        <Id>9a663ab1-0179-40f2-831c-1da0d3c47710</Id>
-        <Parent z:Ref="i2" />
-        <PropertyValues />
-        <SelectedOptionId>0</SelectedOptionId>
-        <AutoCloseMode>None</AutoCloseMode>
-        <EnableStatus>true</EnableStatus>
-        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
-        <RetryCount>-1</RetryCount>
-        <Text></Text>
-        <_activityFullName>BR.Core.Base.Sleep</_activityFullName>
-      </AbstractStep>
     </Childs>
     <Id>f7f0dae7-e33d-4d73-9474-537821b94e25</Id>
     <Parent i:nil="true" />
@@ -376,14 +363,14 @@
   <Name>get_mail.pix</Name>
   <Namespaces xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <Params>
-    <Parameter z:Id="i37">
+    <Parameter z:Id="i36">
       <DefaultValueExpression></DefaultValueExpression>
       <Description>Письмо принято от</Description>
       <Name>out_MailSender</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.String</TypeString>
     </Parameter>
-    <Parameter z:Id="i38">
+    <Parameter z:Id="i37">
       <DefaultValueExpression></DefaultValueExpression>
       <Description>Принято ли письмо Да/Нет</Description>
       <Name>out_FindMail</Name>

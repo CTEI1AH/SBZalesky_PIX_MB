@@ -7,23 +7,10 @@
     <Childs>
       <AbstractStep z:Id="i3" i:type="ExecutedStep">
         <Childs />
-        <Id>71d34a04-ff5d-4b60-ba38-123915536984</Id>
-        <Parent z:Ref="i2" />
-        <PropertyValues />
-        <SelectedOptionId>0</SelectedOptionId>
-        <AutoCloseMode>None</AutoCloseMode>
-        <EnableStatus>true</EnableStatus>
-        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
-        <RetryCount>-1</RetryCount>
-        <Text></Text>
-        <_activityFullName>BR.Core.Base.Sleep</_activityFullName>
-      </AbstractStep>
-      <AbstractStep z:Id="i4" i:type="ExecutedStep">
-        <Childs />
         <Id>d845148c-412b-418d-800a-06ed00c0b539</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
-          <PropertyValue z:Id="i5">
+          <PropertyValue z:Id="i4">
             <PropertyName>Subject</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>"Мосбиржа ответ робота PIX"</_expression>
@@ -31,7 +18,7 @@
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i6">
+          <PropertyValue z:Id="i5">
             <PropertyName>Body</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>"В данном excel файле " +in_RowCount + in_string_EndLine</_expression>
@@ -39,7 +26,7 @@
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i7">
+          <PropertyValue z:Id="i6">
             <PropertyName>To</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>in_MailSender</_expression>
@@ -47,7 +34,7 @@
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i8">
+          <PropertyValue z:Id="i7">
             <PropertyName>Attachment</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>@"inMail\Report_05_05_2022-05_05_2022.xlsx"</_expression>
@@ -79,21 +66,21 @@
   <Name>send_mail.pix</Name>
   <Namespaces xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <Params>
-    <Parameter z:Id="i9">
+    <Parameter z:Id="i8">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>in_MailSender</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.String</TypeString>
     </Parameter>
-    <Parameter z:Id="i10">
+    <Parameter z:Id="i9">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>in_string_EndLine</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.String</TypeString>
     </Parameter>
-    <Parameter z:Id="i11">
+    <Parameter z:Id="i10">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>in_RowCount</Name>

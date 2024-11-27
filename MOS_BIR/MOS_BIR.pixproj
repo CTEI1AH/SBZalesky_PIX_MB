@@ -25,7 +25,7 @@
     </ProjectFileItem>
     <ProjectFileItem z:Id="i7">
       <IsMain>false</IsMain>
-      <Path>INT_Sklonenie.pix</Path>
+      <Path>declension .pix</Path>
     </ProjectFileItem>
   </Files>
   <MasterUploadId i:nil="true" />

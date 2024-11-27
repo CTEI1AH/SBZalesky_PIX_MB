@@ -13,7 +13,7 @@
           <PropertyValue z:Id="i4">
             <PropertyName>Value</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>io_DateStart.Substring(2, 4)</_expression>
+            <_expression>"." + DateTime.Parse(io_DateStart).ToString("MM") + "."</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -43,7 +43,7 @@
           <PropertyValue z:Id="i7">
             <PropertyName>Value</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>io_DateEnd.Substring(2, 4)</_expression>
+            <_expression>"." + DateTime.Parse(io_DateEnd).ToString("MM") + "."</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -258,7 +258,7 @@
           <PropertyValue z:Id="i26">
             <PropertyName>FileName</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>@"inMail\"+global_ReportName+".xlsx"</_expression>
+            <_expression>@"outMail\"+global_ReportName+".xlsx"</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -312,7 +312,7 @@
           <PropertyValue z:Id="i32">
             <PropertyName>FileName</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>@"inMail\"+global_ReportName+".xlsx"</_expression>
+            <_expression>@"outMail\"+global_ReportName+".xlsx"</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -358,7 +358,7 @@
           <PropertyValue z:Id="i37">
             <PropertyName>FileName</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>@"inMail\"+global_ReportName+".xlsx"</_expression>
+            <_expression>@"outMail\"+global_ReportName+".xlsx"</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -396,7 +396,7 @@
           <PropertyValue z:Id="i41">
             <PropertyName>FileName</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>@"inMail\"+global_ReportName+".xlsx"</_expression>
+            <_expression>@"outMail\"+global_ReportName+".xlsx"</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -434,7 +434,7 @@
           <PropertyValue z:Id="i45">
             <PropertyName>PathToFile</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>@"inMail\"+global_ReportName+".xlsx"</_expression>
+            <_expression>@"outMail\"+global_ReportName+".xlsx"</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
